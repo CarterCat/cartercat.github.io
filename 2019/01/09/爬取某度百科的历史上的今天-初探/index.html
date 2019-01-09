@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>CarterCat&#39;s Blog</title>
+    <title>爬取某度百科的历史上的今天-初探 · CarterCat&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -70,6 +70,8 @@
 
     <link rel="preload" href= /css/style.css?v=20180630 as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href= /css/mobile.css?v=20180630 media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -209,12 +211,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >CarterCat&#39;s Blog.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">爬取某度百科的历史上的今天-初探</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>CarterCat's Blog.</a>
 </header>
@@ -228,24 +241,74 @@
 
 
 
+height:50vh;
+
 >
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            爬取某度百科的历史上的今天-初探
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "自动化测试">自动化测试</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count">470</span> / Reading time: <span class="post-count">2 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/01/09</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -346,201 +409,75 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/01/09/爬取某度百科的历史上的今天-初探/" >
-            
-                <span>爬取某度百科的历史上的今天-初探</span>
-        </a>
-        <div class="abstract-content">
-            爬取某度百科的历史上的今天-初探背景：本来是想放在公众号中，将历史上的今天的数据抓取下来，当作每日推送。
-初期设想：
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="爬取某度百科的历史上的今天-初探"><a href="#爬取某度百科的历史上的今天-初探" class="headerlink" title="爬取某度百科的历史上的今天-初探"></a>爬取某度百科的历史上的今天-初探</h1><h2 id="背景："><a href="#背景：" class="headerlink" title="背景："></a>背景：</h2><p>本来是想放在公众号中，将历史上的今天的数据抓取下来，当作每日推送。</p>
+<p>初期设想：</p>
+<ol>
+<li>获取wiki的数据；</li>
+<li>自动推送图文消息。</li>
+</ol>
+<p>但是在实现的过程中遇到了几个问题：</p>
+<ol>
+<li>Wiki数据难获取；</li>
+<li>Wiki访问受限；</li>
+<li>调用自动推送图文消息的接口，需要订阅号认证。</li>
+</ol>
+<p>这些问题，解决起来需要时间和精力，于是我将方向调转，找到了某度百科，发现有类似的功能，虽然数据少的可怜，并且各种被河蟹，但是至少能用。</p>
+<p><a href="https://baike.baidu.com/calendar" target="_blank" rel="noopener">地址在此</a></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fz0bzcm6rxj30jf0ivqec.jpg" alt=""></p>
+<h2 id="过程："><a href="#过程：" class="headerlink" title="过程："></a>过程：</h2><p>选择好了方向，剩下的就是想办法获取数据，作为一名有追求的软件测试工程师，每天手动打开网页复制粘贴是不可能的，这辈子都不可能的。</p>
+<p>默默的打开了调试工具，发现了某度百科的请求地址：<br><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fz0c3rsggbj30iv03pwex.jpg" alt=""><br>（这么明显的暴露出来，真的是干得漂亮！）</p>
+<p><code>https://baike.baidu.com/cms/home/eventsOnHistory/01.json?_=1546921274875</code></p>
+<p>我们分析下这个URL地址，<code>01.json</code>中数字代表着月份，<code>_=1546921274875</code>这一串看着像是时间戳，可以忽略。</p>
+<p>总结来说，我们只需要使用get方法，按照不同的月份请求<code>https://baike.baidu.com/cms/home/eventsOnHistory/月份.json</code>，就能获取到需要的数据，加上循环，可以一次性获取一整年的数据。</p>
+<p>再看下返回的json数据：<br><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fz0c8o04ilj30mc0f943l.jpg" alt=""></p>
+<p>已经按照不同日期划分好了格式，不要客气，用它。<br><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fz0c9tjucbj30n10c977d.jpg" alt=""></p>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><ol>
+<li>虽然数据少的可怜，但是简单，容易上手；</li>
+<li>一次获取一整年，性价比可以；</li>
+<li>还是喜欢wiki的数据，有空再研究下怎么获取吧，下次更新。</li>
+</ol>
 
-获取wiki的数据；
-自动推送图文消息。
-
-但是在实现的过程中遇到了几个问题：
-
-Wiki数据难获取；
-Wiki访问受限；
-调用自动推送图文消息的接口，需要订阅号认证。
-
-这些问题，解决起来需要时间和精力，于是我将方向调转，找到了某度百科，发现有类似的功能，虽然数据少的可怜，并且各种被河蟹，但是至少能用。
-地址在此
-
-过程：选择好了方向，剩下的就是想办法获取数据，作为一名有追求的软件测试工程师，每天手动打开网页复制粘贴是不可能的，这辈子都不可能的。
-默默的打开了调试工具...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/09</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "自动化测试">自动化测试</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/10/自动化测试，从入门到跑路-3/" >
-            
-                <span>自动化测试，从入门到跑路-3</span>
-        </a>
-        <div class="abstract-content">
-            自动化测试，从入门到跑路-3上篇文章大概说了下接口测试的思路，所谓技多不压身，最近又开始做起了UI层面的自动化测试，谁叫我是个有追求的测试工程师。
-提及UI层面的测试，就绕不开传说中的测试金字塔：
-看样子有点丑，但是很说明问题，如果按照数量推荐的程度来说，一般都会推荐少做UI层面的，尽可能多的去做代码层面的单元测试。
-为什么这么说呢？
-因为，UI测试本身的不稳定性。
-对于我来说，UI测试一般分为两种：
-
-通过自动化软件，录制测试流程，并生成可执行文件等；
-通过脚本、工具，模拟测试流程，并对结果进行处理、比对等操作。
-
-总而言之，大致分成两类：“软件类”和“脚本类”。
-软件类软件类里面就包...
+        <div class="license-wrapper">
+            <p>原文作者: <a href="https://cartercat.github.io">CarterCat</a>
+            <p>原文链接: <a href="https://cartercat.github.io/2019/01/09/爬取某度百科的历史上的今天-初探/">https://cartercat.github.io/2019/01/09/爬取某度百科的历史上的今天-初探/</a>
+            <p>发表日期: <a href="https://cartercat.github.io/2019/01/09/爬取某度百科的历史上的今天-初探/">January 9th 2019, 3:01:47 pm</a>
+            <p>版权声明: 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "自动化测试">自动化测试</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/07/30/自动化测试，从入门到跑路-2/" >
-            
-                <span>自动化测试，从入门到跑路-2</span>
-        </a>
-        <div class="abstract-content">
-            自动化测试，从入门到跑路-2咱们书接上回，自动上次接手了测试脚本，就一发而不可收拾，总是想找各种各样的机会来锻炼脚本的能力。并不是为了偷懒
-于是搞起了基于业务和接口方面的自动化，惊不惊喜，意不意外。
-
-接口测试咱们这次只说接口方面的自动化测试，界面方面的继续开坑，放在后面待我慢慢道来。
-问，接口测试总共分几步？第1步 了解业务作为一名从业近4年的测试工程师推下眼镜，私自认为，不论是哪种测试，都不能脱离真实的业务使用场景。
-如果时间、资源允许的情况下，当然可以去做很多极端情况的测试，在软件崩溃的边缘不断试探。
-
-但是，试探的多了，对产品上线并不一定会有多少帮助。
-
-反而，可能会影响正常的项...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "自动化测试">自动化测试</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/06/21/测试脚本打包工具，了解一下/" >
-            
-                <span>测试脚本打包工具，了解一下</span>
-        </a>
-        <div class="abstract-content">
-            测试脚本打包工具，了解一下你是否也遇到过这样的情况，辛辛苦苦写的测试脚本，脱离了开发环境，换了一台机器就不能使用了，要么从搭建开发环境到跑路，要么老老实实在本机运行。
-曾经的我是老老实实本地运行，但是毕竟会经常接触到将工作成果共享的情况。于是，为了保证脚本不外显，并且增强脚本的可移植性，我打开了万恶的同性在线交友网站github，开始搜索python脚本打包工具。
-不得不说github真的是一个神奇的网站。
-首当其冲搜到了pyinstaller，小星星4.2K，我觉得还比较靠谱。于是打开命令行，输入了一串神奇的字符pip3 install pyinstaller
-趁着安装的时候，熟悉了下...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "自动化测试">自动化测试</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/06/10/自动化测试，从入门到跑路-1/" >
-            
-                <span>自动化测试，从入门到跑路-1</span>
-        </a>
-        <div class="abstract-content">
-            自动化测试，从入门到跑路-1年轻的测试哟，听说你要写自动化？听说不想做自动化的测试，不是好开发。作为一名高贵的处女座软件测试工程师，区区自动化还是信手拈来的。（才不会告诉你，是我们老大要求我去写）
-
-这里是背景：因为某项目在迁移技术栈，从Ruby迁移至PHP，由于没有测试介入，导致上线后部分功能不可用，于是老大揪过来了测试，并且要求能写自动化的地方就尝试写些自动化。
-
-作为本司唯二的测试，自然义不容辞的拉上了另外一个测试，从头把项目整理了一遍。
-1、2、3，开始动手做这次要做的事情是：检查界面显示文章的显示是否正常。
-已经手动过了一遍，但是作为一名有理想、有追求、有想法的三有青年，怎么可...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "自动化测试">自动化测试</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/12/03/Hexo常用操作-个人备忘/" title= Hexo常用操作-个人备忘 >
+                    <div class="prevTitle">Hexo常用操作-个人备忘</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!--PC和WAP自适应版-->
+
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -591,6 +528,24 @@ Wiki访问受限；
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#爬取某度百科的历史上的今天-初探"><span class="toc-number">1.</span> <span class="toc-text">爬取某度百科的历史上的今天-初探</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#背景："><span class="toc-number">1.1.</span> <span class="toc-text">背景：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#过程："><span class="toc-number">1.2.</span> <span class="toc-text">过程：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结："><span class="toc-number">1.3.</span> <span class="toc-text">总结：</span></a></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -896,6 +851,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
