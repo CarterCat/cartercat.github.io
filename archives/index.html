@@ -354,6 +354,57 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/02/27/SSH-key相关内容/" >
+            
+                <span>SSH_key相关内容</span>
+        </a>
+        <div class="abstract-content">
+            SSH_key相关内容查看本地ssh
+打开终端；
+输入ssh-keygen；
+一路回车即可生成ssh文件；
+还是终端；
+输入ls -a ~/.ssh进行目录搜索；
+如果生成成功，或者之前生成过，会搜出如下内容；
+进入ssh目录中；
+查看“id_rsa.pub”文件的内容即可。
+
+在github项目上添加ssh key
+进入项目；
+选择设置；
+选择“Deploy keys”；
+添加新的key；
+输入内容后保存即可。
+
+验证ssh key是否添加成功
+打开终端；
+输入ssh -T git@github.com；
+如果出现下图所示的内容，则表示添加成功。
+
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/27</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "SSH_key">SSH_key</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/02/12/爬取某基百科的历史上的今天-再探/" >
             
                 <span>爬取某基百科的历史上的今天-再探</span>
@@ -687,44 +738,11 @@ Wiki访问受限；
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/06/01/招聘过程中遇到的几种应聘者/" >
-            
-                <span>招聘过程中遇到的几种应聘者</span>
-        </a>
-        <div class="abstract-content">
-            招聘过程中遇到的几种应聘者背景如下：
-
-公司从年后回来准备开始招聘测试相关人员，打算组建测试团队。作为公司目前唯一的测试工程师，自然而然的担负起招聘面试的责任和工作。
-本文中简单记录了招聘过程中遇到的一些招聘者，希望能对最近在找工作的小伙伴有所帮助。文中观点，仅供参考，来源本人经历，纯粹的主观经验分享，绝对真实。
-
-强调一下，本文中出现的所有栗子，只是举栗说明问题，并不代表对某种职业或工作有任何的歧视色彩
-简历
-先说下简历，都说金3银4，这两个月可以算是跳槽的高峰期，也是招聘的旺季，每天收到的简历基本都是两位数。
-面对这么多的简历，想要快速的筛选出满足要求的简历，就需要有所取舍，比如说查...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "招聘">招聘</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
+    
+    <nav class="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">NEXT &#62;</a>
+    </nav>
     
 </main>
             <!-- profile -->
@@ -905,9 +923,10 @@ Wiki访问受限；
     
     
     
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 10
+        Total : 11
         </div>
         <!-- search  -->
         
@@ -924,6 +943,11 @@ Wiki访问受限；
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/27</span><a class="archive-post-title" href= "/2019/02/27/SSH-key相关内容/" >SSH_key相关内容</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -991,11 +1015,13 @@ Wiki访问受限；
     
         <span class="sidebar-tag-name" data-tags="Blog"><span class="iconfont-archer">&#xe606;</span>Blog</span>
     
-        <span class="sidebar-tag-name" data-tags="移动端测试"><span class="iconfont-archer">&#xe606;</span>移动端测试</span>
+        <span class="sidebar-tag-name" data-tags="SSH_key"><span class="iconfont-archer">&#xe606;</span>SSH_key</span>
+    
+        <span class="sidebar-tag-name" data-tags="招聘"><span class="iconfont-archer">&#xe606;</span>招聘</span>
     
         <span class="sidebar-tag-name" data-tags="自动化测试"><span class="iconfont-archer">&#xe606;</span>自动化测试</span>
     
-        <span class="sidebar-tag-name" data-tags="招聘"><span class="iconfont-archer">&#xe606;</span>招聘</span>
+        <span class="sidebar-tag-name" data-tags="移动端测试"><span class="iconfont-archer">&#xe606;</span>移动端测试</span>
     
         <span class="sidebar-tag-name" data-tags="编程"><span class="iconfont-archer">&#xe606;</span>编程</span>
     
@@ -1034,9 +1060,11 @@ jsonContent:
     
         <span class="sidebar-category-name" data-categories="Blog"><span class="iconfont-archer">&#xe60a;</span>Blog</span>
     
-        <span class="sidebar-category-name" data-categories="测试"><span class="iconfont-archer">&#xe60a;</span>测试</span>
+        <span class="sidebar-category-name" data-categories="github"><span class="iconfont-archer">&#xe60a;</span>github</span>
     
         <span class="sidebar-category-name" data-categories="招聘"><span class="iconfont-archer">&#xe60a;</span>招聘</span>
+    
+        <span class="sidebar-category-name" data-categories="测试"><span class="iconfont-archer">&#xe60a;</span>测试</span>
     
         <span class="sidebar-category-name" data-categories="编程"><span class="iconfont-archer">&#xe60a;</span>编程</span>
     
