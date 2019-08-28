@@ -413,19 +413,19 @@ height:50vh;
     <article class="article-entry">
         <h1 id="自动化测试，从入门到跑路-2"><a href="#自动化测试，从入门到跑路-2" class="headerlink" title="自动化测试，从入门到跑路-2"></a>自动化测试，从入门到跑路-2</h1><p>咱们书接上回，自动上次接手了测试脚本，就一发而不可收拾，总是想找各种各样的机会来锻炼脚本的能力。<del>并不是为了偷懒</del></p>
 <p>于是搞起了基于业务和接口方面的自动化，惊不惊喜，意不意外。</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1ftrytiuj42j30g70hqabn.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tKfTcly1ftrytiuj42j30g70hqabn.jpg" alt=""></p>
 <h2 id="接口测试"><a href="#接口测试" class="headerlink" title="接口测试"></a>接口测试</h2><p>咱们这次只说接口方面的自动化测试，界面方面的继续开坑，放在后面待我慢慢道来。</p>
 <h2 id="问，接口测试总共分几步？"><a href="#问，接口测试总共分几步？" class="headerlink" title="问，接口测试总共分几步？"></a>问，接口测试总共分几步？</h2><h3 id="第1步-了解业务"><a href="#第1步-了解业务" class="headerlink" title="第1步 了解业务"></a>第1步 了解业务</h3><p>作为一名从业近4年的测试工程师<del>推下眼镜</del>，私自认为，不论是哪种测试，都不能脱离真实的业务使用场景。</p>
 <p>如果时间、资源允许的情况下，当然可以去做很多极端情况的测试，在软件崩溃的边缘不断试探。</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1ftry03udsbj30jg0d675o.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tKfTcly1ftry03udsbj30jg0d675o.jpg" alt=""></p>
 <p>但是，试探的多了，对产品上线并不一定会有多少帮助。</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1ftrxznj4waj30i30i3tad.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tKfTcly1ftrxznj4waj30i30i3tad.jpg" alt=""></p>
 <p>反而，可能会影响正常的项目更新，特别是在项目节奏不明确，没有里程碑和质量红线的情况下，疯狂试探，反而会浪费一些人效。</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1ftrxyyz8bhj308p063aac.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tKfTcly1ftrxyyz8bhj308p063aac.jpg" alt=""></p>
 <p>举个栗子，我们的团队是基于敏捷模式进行开发的，没错，你没听错，就是那个已经“烂大街”的敏捷开发。</p>
 <p>现在也搞不懂，基本是个年轻点的团队都在说自己是遵循敏捷原则，并且是最好的敏捷开发模式，有些还在不断的diss传统的开发模式，那些经常揪着瀑布流开发模式不放的孩子们，可能是对瀑布流有些误解。</p>
 <p>传统的瀑布流，也不是按部就班的流水线，其中也分成了很多里程碑和阶段性成就，怎么样听起来是不是很想敏捷开发中说的“迭代”。其实，我们常说的敏捷开发，和拆碎后的瀑布流很相似，具体的就不瞎说了，毕竟这只是我的一家之言。</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1ftrykewkb0j307f0853yp.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tKfTcly1ftrykewkb0j307f0853yp.jpg" alt=""></p>
 <p>我们还是书回正题，继续上面的栗子，团队之中尽力像敏捷靠拢，但是对于需求和每个迭代并没有整体上的规划，基本都是接到什么，评估下可不可以做，然后就丢入后面的迭代。</p>
 <p>并且，对需求的说明，来不及准备详细的设计和说明文档，也不会去定义，什么程度下可以直接进行交付。</p>
 <p>作为公司为二的测试，不时会遇到以下这些情况：</p>
@@ -454,15 +454,15 @@ height:50vh;
 <li><a href="https://www.getpostman.com/docs/v6/postman/scripts/test_scripts" target="_blank" rel="noopener">支持测试</a></li>
 </ol>
 <p>“<a href="https://www.getpostman.com/docs/v6/postman/scripts/test_scripts" target="_blank" rel="noopener">支持测试</a>”这一点，很戳我这个处女座软件测试工程师。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fts0dha8bwj31kw19uwwv.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tKfTcly1fts0dha8bwj31kw19uwwv.jpg" alt=""></p>
 <p>虽然，PostMan支持测试脚本，并生成测试集批量执行。但是，毕竟不是一款专门用作接口测试的工具，不过基本使用已经很足够了。</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fts0jcb5mqj31kw0iq771.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tKfTcly1fts0jcb5mqj31kw0iq771.jpg" alt=""></p>
 <h4 id="SoapUI"><a href="#SoapUI" class="headerlink" title="SoapUI"></a>SoapUI</h4><p>专门用作接口测试的工具，界面风格和Jmeter有些类似，具体的使用就不在这里介绍了，如果有时间，后续整理下这些常用工具的使用方法和技巧。</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1ftrytiuj42j30g70hqabn.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tKfTcly1ftrytiuj42j30g70hqabn.jpg" alt=""></p>
 <h4 id="YApi"><a href="#YApi" class="headerlink" title="YApi"></a>YApi</h4><p>YApi是一款旨在为开发、产品、测试人员提供更优雅的接口管理服务的开源软件。<del>介绍文字来自YApi官网</del></p>
 <p>如果想在项目中实际使用，可以移步<a href="https://yapi.ymfe.org/documents/index.html" target="_blank" rel="noopener">传送门</a>，官方给出了很详细的说明。</p>
 <p>基本按照官方给出的步骤，傻瓜式安装使用即可。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fts0rqnrm1j30z30iw77g.jpg" alt=""><br><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fts0tkhravj31010kstby.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tKfTcly1fts0rqnrm1j30z30iw77g.jpg" alt=""><br><img src="https://tva1.sinaimg.cn/large/006tKfTcly1fts0tkhravj31010kstby.jpg" alt=""></p>
 <p>友情提示：<a href="https://yapi.ymfe.org/documents/data.html#postman-%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5" target="_blank" rel="noopener">YApi支持Postman数据导入</a></p>
 <p>以上3款软件，均可以对接口进行测试，并且已经尽可能的减少了测试的成本。</p>
 <p>但是，只用工具又怎么能展示出我的能力呢，所以最后还是选择了手写脚本。<br>其实是因为需要跨多个系统，涉及到多个系统之间不同数据的调用和对比，用工具做起来不是很方便，于是，手敲python自己搞，就是这么简单、粗暴。</p>
@@ -472,12 +472,12 @@ height:50vh;
 <p>需要的数据，json：{“name”:”test”, “gender”:”test”, “height”:”test”, “weight”:”test”}</p>
 <p>期望输出，data：{“token”:”test”}</p>
 <p>数据格式如上，假设业务有要求，并且前端做了限制，姓名不能为空，则大概需要测试的情况如下所示：</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fts1zngojxj30uz0cgmzh.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tKfTcly1fts1zngojxj30uz0cgmzh.jpg" alt=""></p>
 <h3 id="第4步-编写测试脚本"><a href="#第4步-编写测试脚本" class="headerlink" title="第4步 编写测试脚本"></a>第4步 编写测试脚本</h3><p>用例也准备好了，如果用工具进行测试，只需要按照用例中的输入数据发起请求，然后比较实际的返回结果和期望的返回结果，就O98K了。</p>
 <p>以PostMan为例，找到文件夹，如下图所示：</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fts24ulpnwj310g0hadht.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tKfTcly1fts24ulpnwj310g0hadht.jpg" alt=""></p>
 <p>选择要执行的接口，配置参数并执行，执行后的结果显示在界面中，如下图所示：</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fts26t2hnsj31kw0zk7be.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tKfTcly1fts26t2hnsj31kw0zk7be.jpg" alt=""></p>
 <p>基于工具的接口测试，基本就是这个样子了。但是折腾如我，能动手写，坚决不用工具。</p>
 <p>于是打开了我的PyCharm，新建工程，嗯……下篇更新吧，溜了溜了。</p>
 
@@ -715,14 +715,6 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 11
@@ -812,15 +804,15 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="Blog"><span class="iconfont-archer">&#xe606;</span>Blog</span>
-    
         <span class="sidebar-tag-name" data-tags="SSH_key"><span class="iconfont-archer">&#xe606;</span>SSH_key</span>
     
-        <span class="sidebar-tag-name" data-tags="招聘"><span class="iconfont-archer">&#xe606;</span>招聘</span>
+        <span class="sidebar-tag-name" data-tags="Blog"><span class="iconfont-archer">&#xe606;</span>Blog</span>
+    
+        <span class="sidebar-tag-name" data-tags="移动端测试"><span class="iconfont-archer">&#xe606;</span>移动端测试</span>
     
         <span class="sidebar-tag-name" data-tags="自动化测试"><span class="iconfont-archer">&#xe606;</span>自动化测试</span>
     
-        <span class="sidebar-tag-name" data-tags="移动端测试"><span class="iconfont-archer">&#xe606;</span>移动端测试</span>
+        <span class="sidebar-tag-name" data-tags="招聘"><span class="iconfont-archer">&#xe606;</span>招聘</span>
     
         <span class="sidebar-tag-name" data-tags="编程"><span class="iconfont-archer">&#xe606;</span>编程</span>
     
@@ -857,13 +849,13 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="Blog"><span class="iconfont-archer">&#xe60a;</span>Blog</span>
-    
         <span class="sidebar-category-name" data-categories="github"><span class="iconfont-archer">&#xe60a;</span>github</span>
     
-        <span class="sidebar-category-name" data-categories="招聘"><span class="iconfont-archer">&#xe60a;</span>招聘</span>
+        <span class="sidebar-category-name" data-categories="Blog"><span class="iconfont-archer">&#xe60a;</span>Blog</span>
     
         <span class="sidebar-category-name" data-categories="测试"><span class="iconfont-archer">&#xe60a;</span>测试</span>
+    
+        <span class="sidebar-category-name" data-categories="招聘"><span class="iconfont-archer">&#xe60a;</span>招聘</span>
     
         <span class="sidebar-category-name" data-categories="编程"><span class="iconfont-archer">&#xe60a;</span>编程</span>
     

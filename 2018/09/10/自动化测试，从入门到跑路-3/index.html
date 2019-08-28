@@ -412,7 +412,7 @@ height:50vh;
             <main class="main post-page">
     <article class="article-entry">
         <h1 id="自动化测试，从入门到跑路-3"><a href="#自动化测试，从入门到跑路-3" class="headerlink" title="自动化测试，从入门到跑路-3"></a>自动化测试，从入门到跑路-3</h1><p>上篇文章大概说了下接口测试的思路，所谓技多不压身，最近又开始做起了UI层面的自动化测试，谁叫我是个有追求的测试工程师。</p>
-<p>提及UI层面的测试，就绕不开传说中的测试金字塔：<br><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fuidc0ifmjj30f00adab1.jpg" alt=""></p>
+<p>提及UI层面的测试，就绕不开传说中的测试金字塔：<br><img src="https://tva1.sinaimg.cn/large/006tNbRwly1fuidc0ifmjj30f00adab1.jpg" alt=""></p>
 <p>看样子有点丑，但是很说明问题，如果按照数量推荐的程度来说，一般都会推荐少做UI层面的，尽可能多的去做代码层面的单元测试。</p>
 <p>为什么这么说呢？</p>
 <p>因为，UI测试本身的不稳定性。</p>
@@ -432,13 +432,13 @@ height:50vh;
 <h5 id="基于界面元素"><a href="#基于界面元素" class="headerlink" title="基于界面元素"></a>基于界面元素</h5><p>这里暂时只介绍B/S端和C/S端的情况，APP移动端接触的不是很多，更多的是自己的野路子，不敢随便传道，担心会把萌新引上弯路。</p>
 <p>B/S端和C/S端区别在于图形库的获取方式，C端更多的会使用专门的图形库进行开发，所以需要按照当前软件的界面，进行获取元素；而B端是基于浏览器或浏览器内核进行开发，我们所看到的界面，都是可以直接操作的元素，不需要再次获取。</p>
 <p>说到C端获取图像的工具，我们的“巨硬”公司提供了一款超级方便的工具：<a href="https://msdn.microsoft.com/zh-cn/library/dd460756.aspx" target="_blank" rel="noopener">Spy++</a></p>
-<p><img src="https://ws4.sinaimg.cn/large/0069RVTdly1fv4nhiwa3ej30990870ss.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/0069RVTdly1fv4nhiwa3ej30990870ss.jpg" alt=""></p>
 <p>可以直接抓取软件界面的基本属性，UFT(QTP)也是基于此工具，进行了拓展，开发出了适合自己本身的元素抓取工具。</p>
-<p>而B端呢，则比较推荐<a href="https://www.seleniumhq.org/projects/ide/" target="_blank" rel="noopener">Selenium IDE</a>，是一款浏览器插件，目前Firefox和Chrome均已兼容，只需要去对应的应用市场，下载安装即可。<br><img src="https://ws3.sinaimg.cn/large/0069RVTdly1fv4nhyijl2j30hs0b4dhy.jpg" alt=""><br><img src="https://ws4.sinaimg.cn/large/0069RVTdly1fv4ni6f1uij30hs0b4jsg.jpg" alt=""><br><img src="https://ws4.sinaimg.cn/large/0069RVTdly1fv4nic9mz2j30hs0b4abq.jpg" alt=""></p>
+<p>而B端呢，则比较推荐<a href="https://www.seleniumhq.org/projects/ide/" target="_blank" rel="noopener">Selenium IDE</a>，是一款浏览器插件，目前Firefox和Chrome均已兼容，只需要去对应的应用市场，下载安装即可。<br><img src="https://tva1.sinaimg.cn/large/0069RVTdly1fv4nhyijl2j30hs0b4dhy.jpg" alt=""><br><img src="https://tva1.sinaimg.cn/large/0069RVTdly1fv4ni6f1uij30hs0b4jsg.jpg" alt=""><br><img src="https://tva1.sinaimg.cn/large/0069RVTdly1fv4nic9mz2j30hs0b4abq.jpg" alt=""></p>
 <p>个人认为这个工具方便的地方有两处：</p>
 <ol>
 <li>可以按照对界面的操作，录制可重复执行的脚本；</li>
-<li>支持导出多种格式的脚本。<br><img src="https://ws2.sinaimg.cn/large/0069RVTdly1fv4niidttrj307o06u0ua.jpg" alt=""></li>
+<li>支持导出多种格式的脚本。<br><img src="https://tva1.sinaimg.cn/large/0069RVTdly1fv4niidttrj307o06u0ua.jpg" alt=""></li>
 </ol>
 <h4 id="脚本类"><a href="#脚本类" class="headerlink" title="脚本类"></a>脚本类</h4><p>关于脚本类的自动化测试，其实比较笼统，不是很好分类，这里只是简单介绍下在工作中实际应用过的方法或工具。</p>
 <h5 id="C端"><a href="#C端" class="headerlink" title="C端"></a>C端</h5><p>因为手头上没有windows的环境，电脑的空间有限，就不折腾虚拟机演示了，这里只是大概介绍下之前是怎么使用的吧。</p>
@@ -452,7 +452,7 @@ height:50vh;
 <p>虽然简化，但是常用的功能一个都不少，而且函数封装的比较方便、简洁。如果只是轻度使用，能满足基本的操作。</p>
 <p>问：网页获取页面元素，总共分几步？<br>答：第一步，打开浏览器；第二步，找到要定位的元素；第三步，鼠标右键，选择检查。</p>
 <p>就这么简单的三步走，甭管前端用的是什么库和框架，天下武功，为此不破。</p>
-<p><img src="https://ws4.sinaimg.cn/large/0069RVTdly1fv4niom9n7j31fm0rwdr4.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/0069RVTdly1fv4niom9n7j31fm0rwdr4.jpg" alt=""></p>
 <p>定位后，通过对不同元素的操作，模拟用户实际的使用流程，从而进行测试。这种也是目前较为主流的测试模式，万变不离其宗，不管用的是什么语言、什么框架、什么工具，其主要思想都是，用某种方式去模拟实际的使用操作，以达到测试的目的。</p>
 <p>综上所述，不管是用到了那种方式，都是不稳定的，只要界面出现调整修改，就可能会引起脚本的崩溃，特别是需求变动频繁的时候，墙裂推荐，佛系测试，先写单元，再写接口，最后再考虑UI。</p>
 
@@ -690,14 +690,6 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 11
@@ -787,15 +779,15 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="Blog"><span class="iconfont-archer">&#xe606;</span>Blog</span>
-    
         <span class="sidebar-tag-name" data-tags="SSH_key"><span class="iconfont-archer">&#xe606;</span>SSH_key</span>
     
-        <span class="sidebar-tag-name" data-tags="招聘"><span class="iconfont-archer">&#xe606;</span>招聘</span>
+        <span class="sidebar-tag-name" data-tags="Blog"><span class="iconfont-archer">&#xe606;</span>Blog</span>
+    
+        <span class="sidebar-tag-name" data-tags="移动端测试"><span class="iconfont-archer">&#xe606;</span>移动端测试</span>
     
         <span class="sidebar-tag-name" data-tags="自动化测试"><span class="iconfont-archer">&#xe606;</span>自动化测试</span>
     
-        <span class="sidebar-tag-name" data-tags="移动端测试"><span class="iconfont-archer">&#xe606;</span>移动端测试</span>
+        <span class="sidebar-tag-name" data-tags="招聘"><span class="iconfont-archer">&#xe606;</span>招聘</span>
     
         <span class="sidebar-tag-name" data-tags="编程"><span class="iconfont-archer">&#xe606;</span>编程</span>
     
@@ -832,13 +824,13 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="Blog"><span class="iconfont-archer">&#xe60a;</span>Blog</span>
-    
         <span class="sidebar-category-name" data-categories="github"><span class="iconfont-archer">&#xe60a;</span>github</span>
     
-        <span class="sidebar-category-name" data-categories="招聘"><span class="iconfont-archer">&#xe60a;</span>招聘</span>
+        <span class="sidebar-category-name" data-categories="Blog"><span class="iconfont-archer">&#xe60a;</span>Blog</span>
     
         <span class="sidebar-category-name" data-categories="测试"><span class="iconfont-archer">&#xe60a;</span>测试</span>
+    
+        <span class="sidebar-category-name" data-categories="招聘"><span class="iconfont-archer">&#xe60a;</span>招聘</span>
     
         <span class="sidebar-category-name" data-categories="编程"><span class="iconfont-archer">&#xe60a;</span>编程</span>
     
